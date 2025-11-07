@@ -46,6 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="masterDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>masterDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PPeriodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPeriodos.Designer.cs">
+      <DependentUpon>PPeriodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPlanes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPlanes.Designer.cs">
+      <DependentUpon>PPlanes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,8 +83,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PFormBase.resx">
       <DependentUpon>PFormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPeriodos.resx">
+      <DependentUpon>PPeriodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPlanes.resx">
+      <DependentUpon>PPlanes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -72,6 +104,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="masterDataSet.xsc">
+      <DependentUpon>masterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="masterDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>masterDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="masterDataSet.xss">
+      <DependentUpon>masterDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -86,6 +129,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Datos\Datos.csproj">
+      <Project>{86a6398d-29f5-4ac4-bb9c-ca1fe43e5ebc}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
     <ProjectReference Include="Modelos\Modelos.csproj">
       <Project>{576fb8ca-679e-457c-b9bb-fe89902bbaa6}</Project>
       <Name>Modelos</Name>

@@ -9,6 +9,6 @@ namespace Modelos
     public class Periodos
     {
         public int id { get; set; }
-        public int descripcion{ get; set; }//yyyyMM
+        public DateTime descripcion{ get; set; }//yyyyMM
     }
 }

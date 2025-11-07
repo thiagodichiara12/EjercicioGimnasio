@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EjercicioClinica
-{
+namespace EjercicioGimnasio { 
+
     static class Program
     {
         /// <summary>
@@ -16,7 +16,7 @@ namespace EjercicioClinica
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu());
+            Application.Run(new PPlanes());
         }
     }
 }
