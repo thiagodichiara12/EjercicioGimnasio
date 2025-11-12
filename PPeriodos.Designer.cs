@@ -31,21 +31,21 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPeriodos = new System.Windows.Forms.DataGridView();
-            this.masterDataSet = new EjercicioGimnasio.masterDataSet();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.periodosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.masterDataSet = new EjercicioGimnasio.masterDataSet();
             this.periodosTableAdapter = new EjercicioGimnasio.masterDataSetTableAdapters.PeriodosTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             this.txtIdPeriodo = new System.Windows.Forms.TextBox();
-            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeriodos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.periodosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -71,15 +71,28 @@
             this.dgvPeriodos.Size = new System.Drawing.Size(246, 150);
             this.dgvPeriodos.TabIndex = 1;
             // 
-            // masterDataSet
+            // colId
             // 
-            this.masterDataSet.DataSetName = "masterDataSet";
-            this.masterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.colId.DataPropertyName = "Id";
+            this.colId.HeaderText = "Id";
+            this.colId.Name = "colId";
+            this.colId.ReadOnly = true;
+            // 
+            // colDescripcion
+            // 
+            this.colDescripcion.DataPropertyName = "Descripcion";
+            this.colDescripcion.HeaderText = "Descripcion";
+            this.colDescripcion.Name = "colDescripcion";
             // 
             // periodosBindingSource
             // 
             this.periodosBindingSource.DataMember = "Periodos";
             this.periodosBindingSource.DataSource = this.masterDataSet;
+            // 
+            // masterDataSet
+            // 
+            this.masterDataSet.DataSetName = "masterDataSet";
+            this.masterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // periodosTableAdapter
             // 
@@ -101,19 +114,7 @@
             this.txtIdPeriodo.Name = "txtIdPeriodo";
             this.txtIdPeriodo.Size = new System.Drawing.Size(100, 20);
             this.txtIdPeriodo.TabIndex = 3;
-            // 
-            // colId
-            // 
-            this.colId.DataPropertyName = "Id";
-            this.colId.HeaderText = "Id";
-            this.colId.Name = "colId";
-            this.colId.ReadOnly = true;
-            // 
-            // colDescripcion
-            // 
-            this.colDescripcion.DataPropertyName = "Descripcion";
-            this.colDescripcion.HeaderText = "Descripcion";
-            this.colDescripcion.Name = "colDescripcion";
+            this.txtIdPeriodo.Text = "Id...";
             // 
             // button2
             // 
@@ -141,6 +142,7 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
             this.txtDescripcion.TabIndex = 6;
+            this.txtDescripcion.Text = "Periodo a guardar...";
             // 
             // button4
             // 
@@ -180,8 +182,8 @@
             this.Text = "PPeriodos";
             this.Load += new System.EventHandler(this.PPeriodos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeriodos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.periodosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

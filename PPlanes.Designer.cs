@@ -134,6 +134,7 @@
             this.txtIdPlan.Name = "txtIdPlan";
             this.txtIdPlan.Size = new System.Drawing.Size(100, 20);
             this.txtIdPlan.TabIndex = 7;
+            this.txtIdPlan.Text = "Ingrese id...";
             // 
             // btnPeriodos
             // 
